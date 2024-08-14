@@ -1,0 +1,351 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 
+  header
+*/
+header {
+  padding: 30px;
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+  background-color: rgb(46, 175, 70);
+}
+
+header>h1 {
+  margin: 0;
+}
+
+/* 
+  img
+ */
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  width: 192px;
+}
+
+/* 
+  nav
+*/
+#nav {
+  margin: 20px 0px;
+  /* border-bottom: 5px solid rgb(46, 175, 70); */
+  padding: 0px 0px;
+}
+
+#nav > ol {
+  margin: 5px 0px;
+  padding: 0px 0px;
+}
+
+#nav > ol > li {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  list-style-type: none;
+  display: inline;
+}
+
+#nav > ol > li > a {
+  text-decoration: none;
+  text-indent: 0px;
+  width: 100%;
+  padding: 8px 8px;
+  font-size: medium;
+}
+
+#nav > ol > li a:hover {
+  background-color: rgb(46, 175, 70);
+  border-radius: 5px;
+  text-decoration: underline;
+  color: white;
+}
+
+/* 
+  section-body
+*/
+#section-body {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+
+/* 
+  articl  
+ */
+#article {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0px 0px;
+  width: 100%;
+}
+
+/* 
+  about-us
+ */
+#about-us {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  background-color: rgb(240,240,245);
+}
+
+#about-us > div {
+  width: 50%;
+  padding: 50px 0px;
+  margin: auto auto;
+}
+
+#about-us > div > h2 {
+  text-align: center;
+  font-size: xx-large;
+  margin: 0px 0px;
+}
+
+#about-us > div > #introduction-id {
+  margin: 0px 0px;
+  padding: 50px 0px;
+  text-align: center;
+  font-size: large;
+}
+
+/* 
+  learning-types
+ */
+#learning-types-id {
+  margin: 40px 0px;
+  padding: 0px 0px;
+}
+
+#learning-types-id > h2 {
+  text-align: center;
+}
+
+.learning-types-gallery {
+  margin: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 480px;
+}
+
+.learning-types-gallery:hover {
+  border: 3px solid rgb(46, 175, 70);
+  border-radius: 5px;
+  color: white;
+}
+
+.learning-types-gallery > a {
+  text-decoration: none;
+}
+
+.learning-types-gallery > a > .learning-types-title {
+  padding: 15px;
+  text-align: center;
+  color: black;
+  font-size: large;
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+.learning-types-gallery:hover > a > .learning-types-title {
+  background-color: rgb(46, 175, 70);
+  color: white;
+}
+
+.learning-types-gallery > a > img {
+  width: 100%;
+  height: auto;
+}
+
+.learning-types-desc {
+  padding: 15px;
+  text-align: center;
+  color: black;
+  font-size: medium;
+}
+
+#clearfix {
+  width: 100%;
+  margin: auto auto;
+}
+
+#clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-bottom: 50px;
+}
+
+/* 
+  What Makes Us Better
+ */
+#whatMakesUsBetter {
+  overflow-x: auto;
+}
+
+/* 
+  table
+*/
+table {
+  margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+table tr td:nth-child(1) {
+  text-align: right;
+}
+
+table tr td:nth-child(2),
+table tr td:nth-child(3),
+table tr td:nth-child(4) {
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: rgb(81, 206, 104);
+}
+
+/* 
+  forms
+*/
+form {
+  width: 25%;
+  margin: auto auto;
+}
+
+form > fieldset {
+  border-radius: 5px;
+  border: 5px solid rgb(46, 175, 70);
+}
+
+form > fieldset > legend {
+  font-size: large;
+}
+
+form > fieldset > div{
+  padding: 0px;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 5%;
+}
+
+form > fieldset > div > div {
+  padding: 3px 0px;
+}
+
+form > fieldset > div label {
+  font-size: large;
+}
+
+form > fieldset > div input[type="text"],
+form > fieldset > div input[type="email"],
+form > fieldset > div input[type="password"] {
+    width: 100%;
+    padding: 8px 0px;
+    border-radius: 5px;
+    font-size: medium;
+    text-indent: 8px;
+    border: 3px solid rgb(46, 175, 70);
+}
+
+select[id="gender"] {
+  font-size: medium;
+  text-indent: 5px;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 8px;
+  border: 3px solid rgb(46, 175, 70);
+}
+
+form > fieldset > div input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 8px;
+}
+
+form > fieldset > div input[type="submit"] {
+  padding: 10px;
+  font-size: large;
+  border-radius: 5px;
+}
+
+form > fieldset > div input[type="submit"]:hover {
+  background-color: rgb(46, 175, 70);
+  color: white;
+}
+
+footer {
+  margin-top: 10px;
+  border-top: 5px solid rgb(46, 175, 70);
+  padding: 10px;
+  text-align: center;
+}
+
+/* media queries */
+@media (max-width: 800px) {
+  #nav {
+    margin: 20px 0px;
+    padding: 0px 0px;
+  }
+
+  #nav > ol {
+    margin: 10px 0px;
+    padding: 0px 0px;
+  }
+  
+  #nav > ol > li {
+    margin: 0px 0px;
+    padding: 0px 0px;
+  }
+
+  #nav > ol > li > a {
+    display: block;
+    padding: 8px 0px;
+    text-indent: 5px;
+  }
+
+  #learning-types-id a {
+    display: block;
+  }
+
+  #about-us {
+    width: 100%;
+  }
+
+  #about-us > div {
+    width: 70%;
+  }
+
+  .learning-types {
+    width: 100%;
+  }
+
+  #section-body {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  form {
+    width: 50%;
+    margin: auto auto;
+  }
+}
