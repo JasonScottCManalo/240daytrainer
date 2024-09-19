@@ -59,7 +59,7 @@ img {
   font-size: medium;
 }
 
-#nav > ol > li a:hover {
+#nav > ol > li:hover > a {
   background-color: rgb(46, 175, 70);
   border-radius: 5px;
   text-decoration: underline;
@@ -105,11 +105,12 @@ img {
   text-align: center;
   font-size: xx-large;
   margin: 0px 0px;
+  padding: 0px 0px;
 }
 
 #about-us > div > #introduction-id {
   margin: 0px 0px;
-  padding: 50px 0px;
+  padding: 30px 0px;
   text-align: center;
   font-size: large;
 }
@@ -117,33 +118,45 @@ img {
 /* 
   learning-types
  */
-#learning-types-id {
-  margin: 40px 0px;
-  padding: 0px 0px;
+
+ #clearfix {
+  width: 100%;
+  margin: auto auto;
 }
 
-#learning-types-id > h2 {
+ #clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-bottom: 50px;
+}
+
+ #learning-types-id {
+  margin: 0px 0px;
+  padding: 20px 0px;
+ }
+
+ #learning-types-id > h2 {
   text-align: center;
 }
 
-.learning-types-gallery {
-  margin: 10px;
+#learning-types-id > #clearfix > .learning-types-gallery {
+  margin: 20px 0.75%;
   border: 1px solid #ccc;
-  float: left;
-  width: 480px;
-}
-
-.learning-types-gallery:hover {
-  border: 3px solid rgb(46, 175, 70);
   border-radius: 5px;
-  color: white;
+  float: left;
+  width: 31.75%;
 }
 
-.learning-types-gallery > a {
+#learning-types-id > #clearfix > .learning-types-gallery:hover {
+  border: 3px solid rgb(46, 175, 70);
+}
+
+#learning-types-id > #clearfix > .learning-types-gallery > a {
   text-decoration: none;
 }
 
-.learning-types-gallery > a > .learning-types-title {
+#learning-types-id > #clearfix > .learning-types-gallery > a > .learning-types-title {
   padding: 15px;
   text-align: center;
   color: black;
@@ -152,33 +165,21 @@ img {
   font-weight: bold;
 }
 
-.learning-types-gallery:hover > a > .learning-types-title {
+#learning-types-id > #clearfix > .learning-types-gallery:hover > a > .learning-types-title {
   background-color: rgb(46, 175, 70);
   color: white;
 }
 
-.learning-types-gallery > a > img {
+#learning-types-id > #clearfix > .learning-types-gallery > a > img {
   width: 100%;
   height: auto;
 }
 
-.learning-types-desc {
+#learning-types-id > #clearfix > .learning-types-gallery > a  > .learning-types-desc {
   padding: 15px;
   text-align: center;
   color: black;
   font-size: medium;
-}
-
-#clearfix {
-  width: 100%;
-  margin: auto auto;
-}
-
-#clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-  margin-bottom: 50px;
 }
 
 /* 
@@ -275,11 +276,10 @@ select[id="gender"] {
 }
 
 form > fieldset > div input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  margin: 0px 5px 0px 0px;
+  padding: 0px 0px;
 }
 
 form > fieldset > div input[type="submit"] {
@@ -323,25 +323,42 @@ footer {
     text-indent: 5px;
   }
 
-  #learning-types-id a {
-    display: block;
-  }
-
   #about-us {
     width: 100%;
+  }
+
+  #learning-types-id {
+    margin: auto auto;
+    padding: 0px 0px;
+    width: 10%;
+  }
+
+  #learning-types-id  .learning-types-gallery {
+    width: inherit;
+    margin: 20px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    float: none;
   }
 
   #about-us > div {
     width: 70%;
   }
 
-  .learning-types {
-    width: 100%;
-  }
-
   #section-body {
     -webkit-flex-direction: column;
     flex-direction: column;
+  }
+
+  #learning-types-id {
+    width: 100%;
+    margin: 0px 0px;
+    padding: 10px 0px;
+  }
+
+  #learning-types-id > #clearfix > .learning-types-gallery {
+    margin: 20px 2%;
+    width: 96%;
   }
 
   form {
