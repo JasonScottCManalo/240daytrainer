@@ -2,6 +2,7 @@
 
 ## Accounting
 
+
 ___
 
 ## Business Management
@@ -33,6 +34,121 @@ ___
 13. Strategic Planning
 14. Supply Chain Management
 15. Strategic Management
+___
+
+**College Courses Related To Business**
+
+- Business Administration
+- Accountancy
+- Accounting Information System
+- Internal Auditing
+- Management Accounting
+___
+
+**Business Administration Majors**
+
+- Financial Management
+- Human Resources
+- Marketing Management
+- Operations Management
+- Office Administration
+- Hospitality Management
+___
+
+**Why business are essential for companies' survival?**
+
+Back to the original point: \
+Buiness often go bankrupt because they forgot about the basics
+
+- The business must have enough cash to cover emergencies (liquidity);
+- THe business must have enough assets so that if loans must be paid off, ortaxes must be paid, the business can cover these "calls" on its assets (solvency); and
+- The business must continue to be profitable, which means that it continues to bring moe income than revenue, thus building up cash and other assets (viability).
+
+Note: \
+Basic Business Principles \
+Forget them at your peril
+___
+
+**Why Companies Go Bankrupt?**
+
+Neglecting the basic principles of liquidity, solvency, and viability.
+
+Liquidity – is the most short-term of these measures because it refers to the ability of a business to quickly turn assets into cash without loss.
+
+Solvency – is measured with a business ratio called the "current ratio," which compares current assets (receivables, supplies, and inventory) to current liabilities (these debts you owe that are due within the next year, like your taxes, payroll taxes, and monthly payments on your business loan). The current ratio is supposed to be 2:1.
+
+That is, the value of your current assets should be twice the amount of your current liabilities.
+
+The principle of solvency is related to liquidity, but it is a little broader. If a business is solvent, it has enough assets to cover its liabilities. If all of the creditors of the business called in their loans and demanded payment (kind of like a run on the bank for business), the business would have to sell or dispose of current assets at a loss.
+
+Viability - the concept of viability is often discussed with living being (new born, for example) and ability not only to survive but thrive. Economic viability means continuing sustainable profits for a business over a period of time. It doesn't mean that every quarter is profitable, which provides for liquidity for emergencies and solvency for current needs.
+
+Remember that a business can be profitable without a lot of cash. Profits are just on paper; cash is on the bank.
+___
+
+**Answers to Bankruptcy**
+
+1. company profit and income profit are lower or equal to target profit.
+
+        problem:
+            cp = ip <= tp
+
+        answer: 
+            ip > cp > tp = tp * 1000
+
+2. Tax
+
+        Personal Income
+        Employee
+        Employer
+        Property
+
+3. Salary
+
+4. Expenses
+
+        Electricity
+        Water
+        Gas
+        Miscellaneous Fees
+        Rent
+
+5. Factors
+
+        Personal Issues:
+            1. Illnesses
+            2. Family Issues
+            3. Lack of Skills, Knowledge, Focus, etc.
+
+        Business Issues:
+            1. Poor Business Location
+            2. Loss of Key Employees
+            3. Lawsuits Raised by Competitors
+            4. Inside Job
+            5. Fraud
+            6. Theft
+            7. Unsettled Debts and Taxes
+
+        Environment Issues:
+            1. Flood
+            2. Storms
+            3. Fires
+            4. Landslides
+            5. Earthquakes
+
+___
+
+**The 9 Characteristics of an ideal business**
+
+1. Do what you love
+2. Stable, growing, and long-term demand
+3. Be portable
+4. High profit margin
+5. Scalability
+6. Low Start-up cost
+7. Requires little or no staff
+8. Low overhead
+9. Money moming in while you sleep
 ___
 
 
