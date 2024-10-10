@@ -15,53 +15,39 @@
     }
 
     #body {
-      /* background-color: rgb(245, 245, 245); */
       padding: 20px 100px 20px 100px;
     }
 
-    header {
-      padding: 20px 0px 20px 0px;
-    }
-
-    nav {
-      padding: 20px 0px 20px 0px;
-    }
-
-    main {
-      padding: 20px 0px 20px 0px;
-    }
-
-    aside {
-      padding: 20px 0px 20px 0px;
-    }
-
+    header,
+    nav,
+    main,
+    aside,
     footer {
-      padding: 20px 0px 20px 0px;
+      padding: 20px 0px;
     }
 
-    nav>.horizontal-scroll {
-      display: flex;
-      overflow-x: auto;
-      white-space: nowrap;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav>.horizontal-scroll>li {
-      box-sizing: border-box;
+    nav>#horizontal-scroll>li {
       display: inline-block;
-      padding: 10px 10px;
-      /* min-width: 100px; */
-      /* Adjust to your preference */
+      border-radius: 5px;
+      padding: 0px 0px;
+      list-style-type: none;
     }
 
-    nav>.horizontal-scroll>li>a {
+    nav>#horizontal-scroll>li>.list-nav { 
+      display: inherit;
+      padding: 10px 10px;
+      width: 100%;
       text-decoration: none;
     }
 
-    nav>.horizontal-scroll>li>a:hover {
+    nav>#horizontal-scroll>li:hover {
+      background-color: rgb(0, 180, 0);
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25); /* Black shadow with 50% opacity */
+    }
+
+    nav>#horizontal-scroll>li:hover>.list-nav {
       text-decoration: underline;
+      color: white;
     }
 
     .class-education-levels {
@@ -81,70 +67,17 @@
       margin: 0;
     }
 
-    /* h1 {
-        margin: 10px 0px 10px 0px;
+    @media (min-width: 10px) and (max-width: 500px) {
+      #body {
+        padding: 10px 10px 10px 10px;
       }
 
-      h1 > a {
-        text-decoration: none;
+      nav>#horizontal-scroll>li {
+        display: block;
       }
+    }
 
-      h1 > a:hover {
-        text-decoration: underline;
-      } */
-
-    /* add some vertical spacing */
-    /* hr {
-        margin: 25px 0px 25px 0px;
-      } */
-
-    /* ol,
-      ul {
-        margin: 5px 0.5in;
-      }
-
-      ol > li > a,
-      ul > li > a {
-        text-decoration: none;
-      }
-
-      ol > li > a:hover,
-      ul > li > a:hover {
-        text-decoration: underline;
-      }
-
-      details > summary {
-        width: fit-content;
-        list-style: none;
-        color: blue;
-        cursor: pointer;
-      }
-
-      details > div {
-        margin: 0in 0in 0.15in 0.15in;
-        width: fit-content;
-      }
-
-      details > summary:hover {
-        text-decoration: underline;
-      }
-
-      details > summary:active {
-        color: red;
-      }
-
-      #heading-elementary {
-        padding: 0in 0in 0.15in 0in;
-      }
-
-      .div-year-levels {
-        margin: 0in 0in 0in 0.15in;
-        padding: 0in 0in 0.15in 0in;
-      }
-
-      .div-year-levels-subjects {
-        margin: 0in 0in 0in 0.15in;
-      } */
+    /* Add more media */
   </style>
 </head>
 
@@ -157,233 +90,168 @@
 
     <nav>
       <h2>NAV</h2>
-      <ol class="horizontal-scroll">
-        <li><a href="">Nursery</a></li>
-        <li><a href="">Preschool</a></li>
-        <li><a href="">Kindergarten 1</a></li>
-        <li><a href="">Kindergarten 2</a></li>
-        <li><a href="">Grade 1</a></li>
-        <li><a href="">Grade 2</a></li>
-        <li><a href="">Grade 3</a></li>
-        <li><a href="">Grade 4</a></li>
-        <li><a href="">Grade 5</a></li>
-        <li><a href="">Grade 6</a></li>
-        <li><a href="">Grade 7</a></li>
-        <li><a href="">Grade 8</a></li>
-        <li><a href="">Grade 9</a></li>
-        <li><a href="">Grade 10</a></li>
-        <li><a href="">Grade 11</a></li>
-        <li><a href="">Grade 12</a></li>
-        <li><a href="">ALS</a></li>
-        <li><a href="">SPED</a></li>
-        <li><a href="">English</a></li>
-        <li><a href="">Mathematics</a></li>
-        <li><a href="">Physics</a></li>
-        <li><a href="">Chemistry</a></li>
-        <li><a href="">Business</a></li>
-        <li><a href="">Computer</a></li>
-        <li><a href="">Education</a></li>
-        <li><a href="">Engineering</a></li>
-        <li><a href="">Law</a></li>
-      </ol>
+      <ul id="horizontal-scroll"></ul>
     </nav>
+  </div>
 
-    <main>
-      <section id="elementary">
-        <h2 id="heading-elementary">Elementary</h2>
+  <main>
+    <section id="elementary">
+      <h2 id="heading-elementary">Elementary</h2>
 
-        <div id="div-elementary-education-levels">
-          <!-- Nursery -->
-          <div class="div-year-levels" id="nursery">
-            <h3 class="heading-year-levels">Nursery</h3>
-            <div class="div-year-levels-subjects">
-              <h4 class="heading-subjects">Subjects</h4>
-              <ol class="class-list-subjects">
-                <li><a href="">Literacy and Language</a></li>
-                <li><a href="">Math</a></li>
-                <li><a href="">Science</a></li>
-                <li><a href="">Art and Creativity</a></li>
-                <li><a href="">Physical Development</a></li>
-                <li><a href="">Social and Emotional Development</a></li>
-                <li><a href="">Cultural Awareness</a></li>
-              </ol>
-            </div>
+      <div id="div-elementary-education-levels">
+        <!-- Nursery -->
+        <article class="div-year-levels" id="nursery">
+          <h3 class="heading-year-levels">Nursery</h3>
+          <div class="div-year-levels-subjects">
+            <h4 class="heading-subjects">Subjects</h4>
+            <ol class="class-list-subjects">
+              <li><a href="">Literacy and Language</a></li>
+              <li><a href="">Math</a></li>
+              <li><a href="">Science</a></li>
+              <li><a href="">Art and Creativity</a></li>
+              <li><a href="">Physical Development</a></li>
+              <li><a href="">Social and Emotional Development</a></li>
+              <li><a href="">Cultural Awareness</a></li>
+            </ol>
           </div>
+        </article>
 
-          <!-- Preschool -->
-          <div class="div-year-levels" id="preschool">
-            <h3 class="heading-year-levels">Preschool</h3>
-            <div class="div-year-levels-subjects">
-              <h4 class="heading-subjects">Subjects</h4>
-              <ol class="class-list-subjects">
-                <li><a href="">Literacy and Language</a></li>
-                <li><a href="">Math</a></li>
-                <li><a href="">Science</a></li>
-                <li><a href="">Art and Creativity</a></li>
-                <li><a href="">Physical Development</a></li>
-                <li><a href="">Social and Emotional Development</a></li>
-                <li><a href="">Cultural Awareness</a></li>
-              </ol>
-            </div>
+        <!-- Preschool -->
+        <article class="div-year-levels" id="preschool">
+          <h3 class="heading-year-levels">Preschool</h3>
+          <div class="div-year-levels-subjects">
+            <h4 class="heading-subjects">Subjects</h4>
+            <ol class="class-list-subjects">
+              <li><a href="">Literacy and Language</a></li>
+              <li><a href="">Math</a></li>
+              <li><a href="">Science</a></li>
+              <li><a href="">Art and Creativity</a></li>
+              <li><a href="">Physical Development</a></li>
+              <li><a href="">Social and Emotional Development</a></li>
+              <li><a href="">Cultural Awareness</a></li>
+            </ol>
           </div>
+        </article>
 
-          <!-- Grade 1 -->
-          <div class="div-year-levels" id="grade-1">
-            <h3 class="heading-year-levels">Grade 1</h3>
-            <div class="div-year-levels-subjects">
-              <h4 class="heading-subjects">Subjects</h4>
-              <ol class="class-list-subjects">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-              </ol>
-            </div>
+        <!-- Grade 1 -->
+        <article class="div-year-levels" id="grade-1">
+          <h3 class="heading-year-levels">Grade 1</h3>
+          <div class="div-year-levels-subjects">
+            <h4 class="heading-subjects">Subjects</h4>
+            <ol class="class-list-subjects">
+              <li><a href=""></a></li>
+            </ol>
           </div>
+        </article>
 
-          <!-- Grade 2 -->
-          <div class="div-year-levels" id="grade-2">
-            <h3 class="heading-year-levels">Grade 2</h3>
-            <div class="div-year-levels-subjects">
-              <h4 class="heading-subjects">Subjects</h4>
-              <ol class="class-list-subjects">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-              </ol>
-            </div>
+        <!-- Grade 2 -->
+        <article class="div-year-levels" id="grade-2">
+          <h3 class="heading-year-levels">Grade 2</h3>
+          <div class="div-year-levels-subjects">
+            <h4 class="heading-subjects">Subjects</h4>
+            <ol class="class-list-subjects">
+              <li><a href=""></a></li>
+            </ol>
           </div>
+        </article>
 
-          <!-- Grade 3 -->
-          <div class="div-year-levels" id="grade-3">
-            <h3 class="heading-year-levels">Grade 3</h3>
-            <div class="div-year-levels-subjects">
-              <h4 class="heading-subjects">Subjects</h4>
-              <ol class="class-list-subjects">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-              </ol>
-            </div>
+        <!-- Grade 3 -->
+        <article class="div-year-levels" id="grade-3">
+          <h3 class="heading-year-levels">Grade 3</h3>
+          <div class="div-year-levels-subjects">
+            <h4 class="heading-subjects">Subjects</h4>
+            <ol class="class-list-subjects">
+              <li><a href=""></a></li>
+            </ol>
           </div>
+        </article>
 
-          <!-- Grade 4 -->
-          <div class="div-year-levels" id="grade-4">
-            <h3 class="heading-year-levels">Grade 4</h3>
-            <div class="div-year-levels-subjects">
-              <h4 class="heading-subjects">Subjects</h4>
-              <ol class="class-list-subjects">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-              </ol>
-            </div>
+        <!-- Grade 4 -->
+        <article class="div-year-levels" id="grade-4">
+          <h3 class="heading-year-levels">Grade 4</h3>
+          <div class="div-year-levels-subjects">
+            <h4 class="heading-subjects">Subjects</h4>
+            <ol class="class-list-subjects">
+              <li><a href=""></a></li>
+            </ol>
           </div>
+        </article>
 
-          <!-- Grade 5 -->
-          <div class="div-year-levels" id="grade-5">
-            <h3 class="heading-year-levels">Grade 5</h3>
-            <div class="div-year-levels-subjects">
-              <h4 class="heading-subjects">Subjects</h4>
-              <ol class="class-list-subjects">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-              </ol>
-            </div>
+        <!-- Grade 5 -->
+        <article class="div-year-levels" id="grade-5">
+          <h3 class="heading-year-levels">Grade 5</h3>
+          <div class="div-year-levels-subjects">
+            <h4 class="heading-subjects">Subjects</h4>
+            <ol class="class-list-subjects">
+              <li><a href=""></a></li>
+            </ol>
           </div>
+        </article>
 
-          <!-- Grade 6 -->
-          <div class="div-year-levels" id="grade-6">
-            <h3 class="heading-year-levels">Grade 6</h3>
-            <div class="div-year-levels-subjects">
-              <h4 class="heading-subjects">Subjects</h4>
-              <ol class="class-list-subjects">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-              </ol>
-            </div>
+        <!-- Grade 6 -->
+        <article class="div-year-levels" id="grade-6">
+          <h3 class="heading-year-levels">Grade 6</h3>
+          <div class="div-year-levels-subjects">
+            <h4 class="heading-subjects">Subjects</h4>
+            <ol class="class-list-subjects">
+              <li><a href=""></a></li>
+            </ol>
           </div>
-        </div>
+        </article>
+      </div>
+    </section>
 
-      </section>
+    <section id="high-school">
+      <h2 id="heading-high-school">Secondary</h2>
 
-      <section id="secondary">
-        <h2 id="heading-secondary">Secondary</h2>
-
-        <div id="div-elementary-education-levels">
+      <div id="div-high-school-education-levels">
+        <div id="junior-high-school">
           <!-- Grade 7 -->
-          <div class="div-year-levels" id="grade-7">
+          <article class="div-year-levels" id="grade-7">
             <h3 class="heading-year-levels">Grade 7</h3>
             <div class="div-year-levels-subjects">
               <h4 class="heading-subjects">Subjects</h4>
               <ol class="class-list-subjects">
                 <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
               </ol>
             </div>
-          </div>
+          </article>
 
           <!-- Grade 8 -->
-          <div class="div-year-levels" id="grade-8">
+          <article class="div-year-levels" id="grade-8">
             <h3 class="heading-year-levels">Grade 8</h3>
             <div class="div-year-levels-subjects">
               <h4 class="heading-subjects">Subjects</h4>
               <ol class="class-list-subjects">
                 <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
               </ol>
             </div>
-          </div>
+          </article>
 
           <!-- Grade 9 -->
-          <div class="div-year-levels" id="grade-9">
+          <article class="div-year-levels" id="grade-9">
             <h3 class="heading-year-levels">Grade 9</h3>
             <div class="div-year-levels-subjects">
               <h4 class="heading-subjects">Subjects</h4>
               <ol class="class-list-subjects">
                 <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
               </ol>
             </div>
-          </div>
+          </article>
 
           <!-- Grade 10 -->
-          <div class="div-year-levels" id="grade-10">
+          <article class="div-year-levels" id="grade-10">
             <h3 class="heading-year-levels">Grade 10</h3>
             <div class="div-year-levels-subjects">
               <h4 class="heading-subjects">Subjects</h4>
               <ol class="class-list-subjects">
                 <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
               </ol>
             </div>
-          </div>
+          </article>
+        </div>
 
+        <article id="senior-high-school">
           <!-- Grade 11 -->
           <div class="div-year-levels" id="grade-11">
             <h3 class="heading-year-levels">Grade 11</h3>
@@ -391,240 +259,172 @@
               <h4 class="heading-subjects">Subjects</h4>
               <ol class="class-list-subjects">
                 <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
               </ol>
             </div>
           </div>
 
           <!-- Grade 12 -->
-          <div class="div-year-levels" id="grade-12">
+          <article class="div-year-levels" id="grade-12">
             <h3 class="heading-year-levels">Grade 12</h3>
             <div class="div-year-levels-subjects">
               <h4 class="heading-subjects">Subjects</h4>
               <ol class="class-list-subjects">
                 <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
               </ol>
             </div>
-          </div>
+          </article>
+        </article>
+      </div>
+    </section>
+
+    <section id="als">
+      <!-- Alternative Learning System -->
+      <div class="div-year-levels" id="alternative-learning-system">
+        <h3 class="heading-year-levels">Alternative Learning System</h3>
+        <div class="div-year-levels-subjects">
+          <h4 class="heading-subjects">Subjects</h4>
+          <ol class="class-list-subjects">
+            <li><a href=""></a></li>
+          </ol>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="als">
+    <section id="sped">
+      <!-- Special Education -->
+      <div class="div-year-levels" id="special-education">
+        <h3 class="heading-year-levels">Special Education</h3>
+        <div class="div-year-levels-subjects">
+          <h4 class="heading-subjects">Subjects</h4>
+          <ol class="class-list-subjects">
+            <li><a href="">Early Childhood Special Education</a></li>
+            <li>
+              <a href="">Education for Students with Visual Impairments</a>
+            </li>
+            <li>
+              <a href="">Education for Students with Hearing Impairments</a>
+            </li>
+            <li><a href="">Autism Spectrum Disorders</a></li>
+            <li><a href="">Learning Disabilities</a></li>
+            <li><a href="">Behavioral and Emotional Disorders</a></li>
+            <li><a href="">Gifted and Talented Education</a></li>
+            <li><a href="">Speech-Language Therapy</a></li>
+            <li><a href="">Occupational Therapy</a></li>
+            <li><a href="">Physical Therapy</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-      </section>
+    <section id="prerequisites">
+      <!-- Prerequisite Subjects -->
+      <div class="div-year-levels" id="prerequisite-subjects">
+        <h3 class="heading-year-levels">Prerequisite Subjects</h3>
+        <div class="div-year-levels-subjects">
+          <h4 class="heading-subjects">Subjects</h4>
+          <ol class="class-list-subjects">
+            <li><a href="">English</a></li>
+            <li><a href="">Mathematics</a></li>
+            <li><a href="">Physics</a></li>
+            <li><a href="">Chemistry</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-      <section id="sped">
+    <section id="studies">
+      <!-- Offered Studies -->
+      <div class="div-year-levels" id="offered-studies">
+        <h3 class="heading-year-levels">Offered Studies</h3>
+        <div class="div-year-levels-subjects">
+          <h4 class="heading-subjects">Subjects</h4>
+          <ol class="class-list-subjects">
+            <li><a href="">Business-Related Studies</a></li>
+            <li><a href="">Computer-Related Studies</a></li>
+            <li><a href="">Education-Related Studies</a></li>
+            <li><a href="">Engineering-Related Studies</a></li>
+            <li><a href="">Healthcare-Related Studies</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-      </section>
+    <section id="glam">
+      <!-- Gallery, Library, Archive, and Museum -->
+      <div class="div-year-levels" id="gallery-library-archive-museum">
+        <h3 class="heading-year-levels">
+          Gallery, Library, Archive, and Museum
+        </h3>
+        <div class="div-year-levels-subjects">
+          <h4 class="heading-subjects">Subjects</h4>
+          <ol class="class-list-subjects">
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Library</a></li>
+            <li><a href="">Archive</a></li>
+            <li><a href="">Museum</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-      <section id="prerequisites">
+    <section id="exams"></section>
 
-      </section>
+    <section id="careers"></section>
+  </main>
 
-      <section id="tertiary">
+  <aside>
+    <h2>ASIDE</h2>
+  </aside>
 
-      </section>
+  <footer>
+    <h2>FOOTER</h2>
+  </footer>
 
-      <section id="glam">
+  <script>
+    var listNav = [
+      "Nursery",
+      "Preschool",
+      "Kindergarten 1",
+      "Kindergarten 2",
+      "Grade 1",
+      "Grade 2",
+      "Grade 3",
+      "Grade 4",
+      "Grade 5",
+      "Grade 6",
+      "Grade 7",
+      "Grade 8",
+      "Grade 9",
+      "Grade 10",
+      "Grade 11",
+      "Grade 12",
+      "Alternative Learning System",
+      "Special Education",
+      "English",
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Business",
+      "Computer",
+      "Education",
+      "Engineering",
+      "Law"
+    ];
 
-      </section>
+    const navContainer = document.getElementById("horizontal-scroll");
+    listNav.forEach((item) => {
+      const listItem = document.createElement("li");  // Create <li> element
+      const anchor = document.createElement("a");     // Create <a> element
 
-      <section id="exams">
+      anchor.href = "#";                              // Set href for the link
+      anchor.textContent = item;                      // Set the text for the link
+      anchor.classList.add("list-nav");               // Add class to <a>
 
-      </section>
-
-      <section id="careers">
-
-      </section>
-
-
-    </main>
-
-    <aside>
-      <h2>ASIDE</h2>
-    </aside>
-
-    <footer>
-      <h2>FOOTER</h2>
-    </footer>
+      navContainer.appendChild(listItem);             // Append <li> to <ul>
+      listItem.appendChild(anchor);                   // Append <a> to <li>
+    });
+  </script>
   </div>
-
-  <div id="div-high-school">
-    <div id="junior-high-school">
-      <h3 id="heading-junior-high-school">Junior High School</h3>
-
-      <!-- Grade 7 -->
-      <div id="div-grade-7" class="div-year-levels">
-        <h3 id="heading-grade-7" class="heading-year-levels">Grade 7</h3>
-        <div id="div-grade-7-subjects" class="div-year-levels-subjects">
-          <h4 id="heading-grade-7-subjects">Subjects</h4>
-          <ol>
-            <li><a href=""></a></li>
-          </ol>
-        </div>
-      </div>
-
-      <!-- Grade 8 -->
-      <div id="div-grade-8" class="div-year-levels">
-        <h3 id="heading-grade-8" class="heading-year-levels">Grade 8</h3>
-        <div id="div-grade-8-subjects" class="div-year-levels-subjects">
-          <h4 id="heading-grade-8-subjects">Subjects</h4>
-          <ol>
-            <li><a href=""></a></li>
-          </ol>
-        </div>
-      </div>
-
-      <!-- Grade 9 -->
-      <div id="div-grade-9" class="div-year-levels">
-        <h3 id="heading-grade-9" class="heading-year-levels">Grade 9</h3>
-        <div id="div-grade-9-subjects" class="div-year-levels-subjects">
-          <h4 id="heading-grade-9-subjects">Subjects</h4>
-          <ol>
-            <li><a href=""></a></li>
-          </ol>
-        </div>
-      </div>
-
-      <!-- Grade 10 -->
-      <div id="div-grade-10" class="div-year-levels">
-        <h3 id="heading-grade-10" class="heading-year-levels">Grade 10</h3>
-        <div id="div-grade-10-subjects" class="div-year-levels-subjects">
-          <h4 id="heading-grade-10-subjects">Subjects</h4>
-          <ol>
-            <li><a href=""></a></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div id="senior-high-school">
-      <h3 id="heading-senior-high-school">Senior High School</h3>
-
-      <!-- Grade 11 -->
-      <div id="div-grade-11" class="div-year-levels">
-        <h3 id="heading-grade-11" class="heading-year-levels">Grade 11</h3>
-        <div id="div-grade-11-subjects" class="div-year-levels-subjects">
-          <h4 id="heading-grade-11-subjects">Subjects</h4>
-          <ol>
-            <li><a href=""></a></li>
-          </ol>
-        </div>
-      </div>
-
-      <!-- Grade 12 -->
-      <div id="div-grade-12" class="div-year-levels">
-        <h3 id="heading-grade-12" class="heading-year-levels">Grade 12</h3>
-        <div id="div-grade-12-subjects" class="div-year-levels-subjects">
-          <h4 id="heading-grade-12-subjects">Subjects</h4>
-          <ol>
-            <li><a href=""></a></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr />
-
-  <div id="div-alternative-learning-system" class="div-year-levels">
-    <h2 id="heading-alternative-learning-system" class="heading-year-levels">
-      Alternative Learning System
-    </h2>
-    <div id="div-alternative-learning-system-subjects" class="div-year-levels-subjects">
-      <ol>
-        <li>
-          <a href="">Learning Strand 1: Communication Skills (English)</a>
-        </li>
-        <li>
-          <a href="">Learning Strand 1: Communication Skills (Filipino)</a>
-        </li>
-        <li>
-          <a href="">Learning Strand 2: Scientific Literacy and Critical Thinking
-            Skills</a>
-        </li>
-        <li>
-          <a href="">Learning Strand 3: Mathematical and Problem Solving Skills</a>
-        </li>
-        <li><a href="">Learning Strand 4: Life and Career Skills</a></li>
-        <li>
-          <a href="">Learning Strand 5: Understanding the Self and Society</a>
-        </li>
-        <li><a href="">Learning Strand 6: Digital Literacy</a></li>
-      </ol>
-    </div>
-  </div>
-
-  <hr />
-
-  <div id="div-special-education"></div>
-
-  <h2 id="heading-special-education">Special Education</h2>
-  <div>
-    <ol>
-      <li><a href="">Early Childhood Special Education</a></li>
-      <li><a href="">Education for Students with Visual Impairments</a></li>
-      <li><a href="">Education for Students with Hearing Impairments</a></li>
-      <li><a href="">Autism Spectrum Disorders</a></li>
-      <li><a href="">Learning Disabilities</a></li>
-      <li><a href="">Behavioral and Emotional Disorders</a></li>
-      <li><a href="">Gifted and Talented Education</a></li>
-      <li><a href="">Speech-Language Therapy</a></li>
-      <li><a href="">Occupational Therapy</a></li>
-      <li><a href="">Physical Therapy</a></li>
-    </ol>
-  </div>
-
-  <hr />
-
-  <h2>Prerequisite Subjects</h2>
-  <div>
-    <ol>
-      <li><a href="">English</a></li>
-      <li><a href="">Mathematics</a></li>
-      <li><a href="">Physics</a></li>
-      <li><a href="">Chemistry</a></li>
-    </ol>
-  </div>
-  <hr />
-
-  <h2>Offered Studies</h2>
-  <ol>
-    <li><a href="">Business-Related Studies</a></li>
-    <li><a href="">Computer-Related Studies</a></li>
-    <li><a href="">Education-Related Studies</a></li>
-    <li><a href="">Engineering-Related Studies</a></li>
-    <li><a href="">Healthcare-Related Studies</a></li>
-  </ol>
-  <hr />
-
-  <h2>GLAM</h2>
-  <ol>
-    <li><a href="">Gallery</a></li>
-    <li><a href="">Library</a></li>
-    <li><a href="">Archive</a></li>
-    <li><a href="">Museum</a></li>
-  </ol>
-  <hr />
-
-  <h2>Exams</h2>
-  <ol>
-    <li><a href=""></a></li>
-  </ol>
-  <hr />
-
-  <h2>Careers</h2>
-  <ol>
-    <li><a href=""></a></li>
-  </ol>
-  <hr />
 </body>
 
 </html>
